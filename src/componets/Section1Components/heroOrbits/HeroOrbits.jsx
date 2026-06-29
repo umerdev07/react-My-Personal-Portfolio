@@ -81,7 +81,7 @@ const HeroOrbit = () => {
       <div className="absolute w-40 h-40 sm:w-56 sm:h-56 lg:w-72 lg:h-72 rounded-full bg-cyan-500/20 blur-3xl" />
 
       {/* Center */}
-      <div className="relative flex items-center justify-center rounded-[28px] border border-white/10 bg-gradient-to-br from-[#27496d] to-[#2b2f68] shadow-[0_0_70px_rgba(59,130,246,.25)] w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-52 lg:h-52">
+      <div className="relative flex items-center justify-center rounded-[28px] border border-white/10 bg-gradient-to-br from-[#27496d] to-[#2b2f68] shadow-[0_0_70px_rgba(59,130,246,.25)] w-20 h-20 sm:w-36   sm:h-36 md:w-44 md:h-44 lg:w-52 lg:h-52">
         <h1 className="font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent text-3xl sm:text-5xl lg:text-6xl">
           UY
         </h1>
