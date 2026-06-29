@@ -40,17 +40,17 @@ const Navbar = () => {
         >
           <i className={menuOpen ? "ri-close-line" : "ri-menu-3-line"}></i>
         </button>
+
       </div>
 
       {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="absolute top-full left-0 w-full z-50 bg-[#071321] border-t border-gray-800">
+      <div className="absolute top-full left-0 w-full z-50 bg-[#071321] border-t border-gray-600">
+        {menuOpen && (
           <MobileMenu
             navItems={navItems}
-            setMenuOpen={setMenuOpen}
           />
-        </div>
-      )}
+        )}
+      </div>
 
     </nav>
   );
