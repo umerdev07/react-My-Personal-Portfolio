@@ -1,23 +1,27 @@
-import React from 'react'
+import React from 'react';
 
-const MobileMenu = (props) => {
-    return (
-        <div className="md:hidden px-10 pb-4 flex flex-col gap-3 text-gray-300">
-            {props.navItems.map((item) => (
-                <a
-                    key={item}
-                    href="#"
-                    className="py-2 border-b border-gray-800"
-                >
-                    {item}
-                </a>
-            ))}
+const MobileMenu = ({ navItems, setMenuOpen }) => {
+  return (
+    <div className="px-6 pb-6 flex flex-col gap-3 text-gray-300">
 
-            <button className="group relative overflow-hidden border border-cyan-400 rounded-full px-5 py-2 text-cyan-300 text-sm hover:bg-white/10 hover:backdrop-blur-lg hover:scale-95 cursor-pointer transition-all duration-300">
-                <i className="ri-download-2-line mr-1"></i>
-                Resume
-            </button>
-        </div>)
-}
+      {navItems.map((item) => (
+        <a
+          key={item}
+          href="#"
+          onClick={() => setMenuOpen(false)}
+          className="py-3 border-b border-gray-800 hover:text-cyan-400 transition"
+        >
+          {item}
+        </a>
+      ))}
 
-export default MobileMenu
+      {/* Resume Button */}
+      <button className="mt-4 group relative overflow-hidden border border-cyan-400 rounded-full px-5 py-2 text-cyan-300 text-sm hover:bg-white/10 transition-all duration-300">
+        <i className="ri-download-2-line mr-1"></i>
+        Resume
+      </button>
+    </div>
+  );
+};
+
+export default MobileMenu;

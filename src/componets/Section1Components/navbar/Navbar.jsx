@@ -1,6 +1,6 @@
 import 'remixicon/fonts/remixicon.css';
 import React, { useState } from 'react';
-import Logo from './Logo'
+import Logo from './Logo';
 import NavItems from './NavItems';
 import Resumebtn from './Resumebtn';
 import MobileMenu from './MobileMenu';
@@ -19,33 +19,39 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-[#071321] w-full border-gray-800">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-10 py-4">
+    <nav className="relative w-full bg-[#071321] border-b border-gray-800">
 
-        {/* Logo */}
+      {/* Main Row */}
+      <div className="flex items-center justify-between px-6 py-4 md:px-10">
+
         <Logo />
 
-        {/* Desktop Menu */}
-        <NavItems navItems={navItems}/>
-
-        {/* Resume Button (Desktop) */}
-        <Resumebtn />
-
-        {/* Mobile Button */}
-        <div className="md:hidden">
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="text-white text-2xl"
-          >
-            <i className={menuOpen ? "ri-close-line" : "ri-menu-3-line"}></i>
-          </button>
+        <div className="hidden md:flex">
+          <NavItems navItems={navItems} />
         </div>
+
+        <div className="hidden md:block">
+          <Resumebtn />
+        </div>
+
+        <button
+          className="md:hidden text-white text-2xl"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <i className={menuOpen ? "ri-close-line" : "ri-menu-3-line"}></i>
+        </button>
       </div>
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <MobileMenu navItems={navItems}/>
+        <div className="absolute top-full left-0 w-full z-50 bg-[#071321] border-t border-gray-800">
+          <MobileMenu
+            navItems={navItems}
+            setMenuOpen={setMenuOpen}
+          />
+        </div>
       )}
+
     </nav>
   );
 };
