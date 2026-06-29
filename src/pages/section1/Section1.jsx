@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../../componets/Section1Components/navbar/Navbar'
-import BodyHome from './bodyHome'
+import BodyHome from './BodyHome'
 
 const Section1 = () => {
   return (
