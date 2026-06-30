@@ -1,4 +1,6 @@
 import React from "react";
+import profilePic from "../../../assets/profile_pic.jpeg";
+
 
 const AboutMeCardMetaData = () => {
   return (
@@ -15,7 +17,7 @@ const AboutMeCardMetaData = () => {
       <div className="flex items-center gap-4">
 
         <img
-          src="/src/assets/profile_pic.jpeg"
+          src={profilePic}
           alt="Profile"
           className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl object-cover flex-shrink-0"
         />
