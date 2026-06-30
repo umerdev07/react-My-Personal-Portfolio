@@ -1,6 +1,5 @@
 import React from "react";
-import profilePic from "../../../assets/profile_pic.jpeg";
-
+import profilePic from "../../assets/profile_pic.jpeg";
 
 const AboutMeCardMetaData = () => {
   return (
