@@ -4,11 +4,11 @@ const HeroState = () => {
   const stats = [
     { number: "4+", label: "Internships" },
     { number: "5+", label: "Projects" },
-    { number: "6+", label: "Certificates" },
+    { number: "2+", label: "Certificates" },
   ];
 
   return (
-    <div className="flex items-center w-full">
+    <div className="flex items-center w-fit lg:gap-4 md:gap-2">
       {stats.map((item, index) => (
         <React.Fragment key={index}>
           <div className="flex-1 text-center px-2">

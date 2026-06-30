@@ -1,12 +1,13 @@
-import 'remixicon/fonts/remixicon.css';
-import React, { useState } from 'react';
-import Logo from './Logo';
-import NavItems from './NavItems';
-import Resumebtn from './Resumebtn';
-import MobileMenu from './MobileMenu';
+import "remixicon/fonts/remixicon.css";
+import React, { useEffect, useState } from "react";
+import Logo from "./Logo";
+import NavItems from "./NavItems";
+import Resumebtn from "./Resumebtn";
+import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scroll, setScroll] = useState(false);
 
   const navItems = [
     "Home",
@@ -15,15 +16,31 @@ const Navbar = () => {
     "Experience",
     "Projects",
     "Education",
-    "Contact"
+    "Contact",
   ];
 
-  return (
-    <nav className="relative w-full bg-[#071321] border-b border-gray-800">
+  useEffect(() => {
+    const handleScroll = () => {
+      setScroll(window.scrollY > 50);
+    };
 
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return (
+    <nav
+      className={`sticky top-0 w-full z-50 transition-all duration-300 ${
+        scroll
+          ? "bg-[#040E1A]/95 backdrop-blur-xl shadow-2xl"
+          : "bg-transparent"
+      }`}
+    >
       {/* Main Row */}
       <div className="flex items-center justify-between px-6 py-4 md:px-10">
-
         <Logo />
 
         <div className="hidden md:flex">
@@ -40,18 +57,14 @@ const Navbar = () => {
         >
           <i className={menuOpen ? "ri-close-line" : "ri-menu-3-line"}></i>
         </button>
-
       </div>
 
       {/* Mobile Menu */}
-      <div className="absolute top-full left-0 w-full z-50 bg-[#071321] border-t border-gray-600">
-        {menuOpen && (
-          <MobileMenu
-            navItems={navItems}
-          />
-        )}
-      </div>
-
+      {menuOpen && (
+        <div className="absolute top-full left-0 w-full z-50 bg-[#071321]">
+          <MobileMenu navItems={navItems} />
+        </div>
+      )}
     </nav>
   );
 };

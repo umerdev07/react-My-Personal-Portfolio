@@ -34,7 +34,7 @@ const Button = ({
       `}
     >
       {children}
-      {icon && <span>{icon}</span>}
+      {icon}
     </button>
   );
 };

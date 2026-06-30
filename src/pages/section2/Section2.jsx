@@ -1,12 +1,12 @@
-import React from 'react'
-import HeroState from '../../componets/Section1Components/leftContent/HeroState'
+import React from "react";
+import AboutMe from "./AboutMe";
 
 const Section2 = () => {
   return (
-    <div className='w-fit h-screen m-10 text-white'>
-      
-    </div>
-  )
-}
+    <section className="w-full min-h-screen mt-20 lg:mt-40 px-4 sm:px-6 lg:px-10 text-white">
+      <AboutMe />
+    </section>
+  );
+};
 
-export default Section2
+export default Section2;
