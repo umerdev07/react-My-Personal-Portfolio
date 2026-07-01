@@ -4,8 +4,12 @@ import HeroButton from "../../componets/Section1Components/leftContent/HeroButto
 import HeroState from '../../componets/Section1Components/leftContent/HeroState';
 
 const LeftContent = () => {
-  const texts = ["CS Graduate", "React Developer", "Flutter Developer", "AI Enthusiast"];
-  const [index, setIndex] = useState(0);
+  const texts = [
+    "Software Engineer",
+    "React Developer",
+    "Flutter Developer",
+    "AI Enthusiast",
+  ]; const [index, setIndex] = useState(0);
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
@@ -46,9 +50,8 @@ const LeftContent = () => {
       <div className="flex items-center gap-4 overflow-hidden min-h-10 mt-4">
         <div className="w-5 h-[2px] bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full shrink-0"></div>
         <h2
-          className={`text-lg font-bold text-blue-500 transition-all duration-700 ease-in-out ${
-            animate ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
-          }`}
+          className={`text-lg font-bold text-blue-500 transition-all duration-700 ease-in-out ${animate ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
+            }`}
         >
           {texts[index]}
         </h2>
@@ -56,19 +59,19 @@ const LeftContent = () => {
 
       {/* Description */}
       <p className="mt-5 max-w-xl text-[#7e8ca0] font-medium leading-8">
-        Passionate CS undergraduate building scalable web, mobile, and AI-powered applications.
-        Turning complex engineering challenges into elegant digital experiences.
-      </p>
+        Software Engineer passionate about building modern web,
+        mobile, and AI-powered applications. Dedicated to creating
+        clean, responsive, and high-performance digital experiences
+        while solving real-world problems through technology.</p>
+        {/* Buttons */}
+        <div className="mt-8 mb-10 w-full">
+          <HeroButton />
+        </div>
 
-      {/* Buttons */}
-      <div className="mt-8 mb-10 w-full">
-        <HeroButton />
-      </div>
-
-      {/* Stats */}
-      <div className="w-full border-t border-gray-700 pt-6">
-        <HeroState />
-      </div>
+        {/* Stats */}
+        <div className="w-full border-t border-gray-700 pt-6">
+          <HeroState />
+        </div>
 
     </div>
   );

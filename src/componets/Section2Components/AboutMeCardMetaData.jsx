@@ -27,7 +27,7 @@ const AboutMeCardMetaData = () => {
           </h2>
 
           <h3 className="mt-1 text-sm sm:text-base font-semibold bg-gradient-to-r from-cyan-400 to-violet-500 bg-clip-text text-transparent">
-            CS Graduate • React • Flutter • AI
+            Software Engineer • React • Flutter • AI Enthusiast
           </h3>
 
           <p className="mt-2 flex items-center gap-2 text-[#94a3b8] text-sm">
@@ -43,11 +43,16 @@ const AboutMeCardMetaData = () => {
       <div className="mt-6">
         <p className="text-[#94a3b8] leading-7 text-sm sm:text-base">
 
-          I'm a Computer Science graduate with a passion for building digital
-          products that solve real-world problems. From crafting modern React
-          interfaces to developing cross-platform Flutter applications and
-          exploring Artificial Intelligence, I enjoy working where design meets
-          engineering.
+          I'm a Software Engineer with hands-on experience in web
+          and mobile application development through internships,
+          academic projects, and personal learning.
+          I enjoy building responsive React applications,
+          cross-platform Flutter apps, and exploring AI-powered
+          solutions to solve real-world problems.
+          Passionate about continuous learning,
+          I strive to write clean, scalable, and
+          maintainable code while creating meaningful
+          digital experiences.
 
           <br />
           <br />

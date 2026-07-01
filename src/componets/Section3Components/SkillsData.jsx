@@ -5,14 +5,14 @@ export const skillNavItems = [
     icon: "ri-code-s-slash-line",
   },
   {
-    id: "mobile_development",
-    name: "Mobile",
-    icon: "ri-smartphone-fill",
-  },
-  {
     id: "frontend_development",
     name: "Frontend",
     icon: "ri-bring-to-front",
+  },
+  {
+    id: "mobile_development",
+    name: "Mobile",
+    icon: "ri-smartphone-fill",
   },
   {
     id: "databases",

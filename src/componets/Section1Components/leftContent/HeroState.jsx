@@ -2,9 +2,9 @@ import React from "react";
 
 const HeroState = () => {
   const stats = [
-    { number: "4+", label: "Internships" },
-    { number: "5+", label: "Projects" },
-    { number: "2+", label: "Certificates" },
+    { number: "4", label: "Internships" },
+    { number: "10+", label: "Projects" },
+    { number: "2", label: "Certificates" },
   ];
 
   return (

@@ -1,10 +1,22 @@
 import Button from "./Button";
 import "remixicon/fonts/remixicon.css";
+import resume from "../../../assets/Muhammad_Umer_Yousaf_Software_Engineer.pdf";
+
 
 function HeroButtons() {
   const handleProjects = () => alert("Projects Button Clicked");
-  const handleResume = () => alert("Resume Button Clicked");
-  const handleContact = () => alert("Contact Button Clicked");
+  const handleResume = () => {
+    window.open(resume, "_blank");
+
+    const link = document.createElement("a");
+    link.href = resume;
+    link.download = "Muhammad_Umer_Yousaf_Software_Engineer.pdf";
+    link.click();
+  };
+
+  const handleContact = () => {
+    window.location.href = "mailto:umeryousaf2020@gmail.com"
+  };
 
   return (
     <div className="flex flex-wrap gap-3">
