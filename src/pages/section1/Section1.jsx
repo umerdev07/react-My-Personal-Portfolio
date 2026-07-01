@@ -3,7 +3,7 @@ import BodyHome from './BodyHome'
 
 const Section1 = () => {
   return (
-    <div className='w-full h-screen '>
+    <div id="home" className='scroll-mt-24 w-full h-screen '>
         <BodyHome />
     </div>
   )

@@ -1,22 +1,22 @@
 import "remixicon/fonts/remixicon.css";
 import React, { useEffect, useState } from "react";
-import Logo from "./Logo";
 import NavItems from "./NavItems";
 import Resumebtn from "./Resumebtn";
 import MobileMenu from "./MobileMenu";
+import Logo from "./Logo"
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scroll, setScroll] = useState(false);
 
   const navItems = [
-    "Home",
-    "About",
-    "Skills",
-    "Experience",
-    "Projects",
-    "Education",
-    "Contact",
+    { name: "Home", id: "home" },
+    { name: "About", id: "about" },
+    { name: "Skills", id: "skills" },
+    { name: "Experience", id: "experience" },
+    { name: "Projects", id: "projects" },
+    { name: "Education", id: "education" },
+    { name: "Contact", id: "contact" },
   ];
 
   useEffect(() => {
@@ -26,21 +26,19 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
-      className={`sticky top-0 w-full z-50 transition-all duration-300 ${
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         scroll
           ? "bg-[#040E1A]/95 backdrop-blur-xl shadow-2xl"
           : "bg-transparent"
       }`}
     >
-      {/* Main Row */}
-      <div className="flex items-center justify-between px-6 py-4 md:px-10">
+      <div className="max-w-7xl mx-auto h-20 px-6 flex items-center justify-between">
+
         <Logo />
 
         <div className="hidden md:flex">
@@ -59,10 +57,12 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {menuOpen && (
-        <div className="absolute top-full left-0 w-full z-50 bg-[#071321]">
-          <MobileMenu navItems={navItems} />
+        <div className="absolute top-full left-0 w-full bg-[#071321] z-50">
+          <MobileMenu
+            navItems={navItems}
+            setMenuOpen={setMenuOpen}
+          />
         </div>
       )}
     </nav>

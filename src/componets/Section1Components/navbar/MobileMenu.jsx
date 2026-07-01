@@ -1,25 +1,39 @@
-import React from 'react';
+import React from "react";
 
 const MobileMenu = ({ navItems, setMenuOpen }) => {
+
+  const scrollToSection = (id) => {
+
+    const section = document.getElementById(id);
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+
+    setMenuOpen(false);
+  };
+
   return (
-    <div className="px-6 pb-6 flex flex-col gap-3 text-gray-300">
+    <div className="flex flex-col px-6 py-4 text-white">
 
       {navItems.map((item) => (
-        <a
-          key={item}
-          href="#"
-          onClick={() => setMenuOpen(false)}
-          className="py-3 border-b border-gray-800 hover:text-cyan-400 transition"
+        <button
+          key={item.id}
+          onClick={() => scrollToSection(item.id)}
+          className="text-left py-3 border-b border-gray-800 hover:text-cyan-400 transition"
         >
-          {item}
-        </a>
+          {item.name}
+        </button>
       ))}
 
-      {/* Resume Button */}
-      <button className="mt-4 group relative overflow-hidden border border-cyan-400 rounded-full px-5 py-2 text-cyan-300 text-sm hover:bg-white/10 transition-all duration-300">
+      <button className="mt-5 group relative overflow-hidden border border-cyan-400 rounded-full px-5 py-2 text-cyan-300 text-sm hover:bg-white/10 transition-all duration-300">
         <i className="ri-download-2-line mr-1"></i>
         Resume
       </button>
+
     </div>
   );
 };
