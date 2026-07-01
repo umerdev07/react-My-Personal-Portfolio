@@ -5,7 +5,7 @@ import RightContent from "./RightContent";
 
 const AboutMe = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-[70px] sm:mt-24 lg:mt-28">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-[80px] sm:mt-24 lg:mt-28">
       <AboutMeTitleSubTitleBadge />
 
       <div className="mt-10 lg:mt-20 flex flex-col lg:flex-row gap-8 lg:gap-12">
