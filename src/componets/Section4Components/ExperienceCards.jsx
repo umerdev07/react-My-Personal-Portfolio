@@ -81,7 +81,8 @@ const ExperienceCard = ({
           {type}
         </span>
 
-        <span className="rounded-full border border-[#22324A] bg-[#111827] px-3 py-1 text-[10px] sm:text-xs lg:text-sm text-gray-300 whitespace-nowrap">
+        <span className={`rounded-full border ${theme.text}  ${theme.border}
+            ${theme.bg} px-3 py-1 text-[10px] sm:text-xs lg:text-sm whitespace-nowrap`}>
           {duration}
         </span>
       </div>
