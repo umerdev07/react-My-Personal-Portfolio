@@ -2,7 +2,7 @@ import React from 'react'
 
 const AboutMeTitleSubTitleBadge = () => {
   return (
-   <section className="w-full flex flex-col items-center text-center lg:mt-0 mt-90">
+   <section className="w-full flex flex-col items-center text-center lg:mt-0 mt-100">
 
       {/* Badge */}
       <div className="flex items-center gap-3 bg-[#09192a]/80 border border-cyan-500/30 rounded-full px-6 py-2 backdrop-blur-md shadow-[0_0_20px_rgba(34,211,238,0.12)]">

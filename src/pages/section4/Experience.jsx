@@ -3,7 +3,7 @@ import Timeline from "../../componets/Section4Components/TimeLine";
 
 const Experience = () => {
   return (
-    <div className="mt-85 lg:mt-5">
+    <div className="mt-120 lg:mt-5">
       {/* Badge */}
       <div className="flex justify-center">
         <div className="flex items-center gap-3 rounded-full border border-cyan-500/20 bg-cyan-500/10 px-5 py-2 backdrop-blur-md shadow-[0_0_20px_rgba(34,211,238,0.12)]">
