@@ -37,27 +37,31 @@ const ExperienceCard = ({
   company,
   description,
   skills = [],
+  shadowColor,
   color = "cyan",
 }) => {
   const theme = colorThemes[color];
 
   return (
     <div
+      style={{
+        "--shadow-color": shadowColor || "rgba(6,182,212,0.15)",
+      }}
       className={`
-        group
-        w-full
-        max-w-md
-        rounded-2xl lg:rounded-3xl
-        border
-        ${theme.border}
-        ${theme.hover}
-        bg-[#0B1220]
-        p-4 sm:p-5 lg:p-6
-        transition-all
-        duration-300
-        hover:-translate-y-2
-        hover:shadow-[0_15px_40px_rgba(6,182,212,0.15)]
-      `}
+    group
+    w-full
+    max-w-md
+    rounded-2xl lg:rounded-3xl
+    border
+    ${theme.border}
+    ${theme.hover}
+    bg-[#0B1220]
+    p-4 sm:p-5 lg:p-6
+    transition-all
+    duration-300
+    hover:-translate-y-2
+    hover:shadow-[0_15px_40px_var(--shadow-color)]
+  `}
     >
       {/* Header */}
       <div className="flex items-start justify-between gap-3">

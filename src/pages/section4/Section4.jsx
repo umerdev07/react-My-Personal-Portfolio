@@ -5,7 +5,7 @@ const Section4 = () => {
   return (
     <section
       id="experience"
-      className="relative overflow-hidden bg-[#060B17] py-24"
+      className="relative py-24"
     >
       {/* Background Glow */}
       <div className="absolute left-0 top-20 h-72 w-72 rounded-full bg-cyan-500/10 blur-[120px]" />

@@ -7,7 +7,7 @@ const Timeline = () => {
     <div className="relative mt-20">
 
       {/* Desktop Vertical Line */}
-      <div className="hidden lg:block absolute left-1/2 top-0 h-full w-[3px] -translate-x-1/2 bg-gradient-to-b from-cyan-400 via-violet-500 to-emerald-400 rounded-full" />
+      <div className="hidden lg:block absolute left-1/2 top-0 h-full w-[3px] -translate-x-1/2 bg-cyan-400 rounded-full" />
 
       {experiences.map((experience, index) => {
         const isLeft = index % 2 === 0;
@@ -16,19 +16,19 @@ const Timeline = () => {
           experience.color === "cyan"
             ? "border-cyan-400"
             : experience.color === "violet"
-            ? "border-violet-400"
-            : experience.color === "emerald"
-            ? "border-emerald-400"
-            : "border-orange-400";
+              ? "border-violet-400"
+              : experience.color === "emerald"
+                ? "border-emerald-400"
+                : "border-orange-400";
 
         const bgColor =
           experience.color === "cyan"
             ? "bg-cyan-400"
             : experience.color === "violet"
-            ? "bg-violet-400"
-            : experience.color === "emerald"
-            ? "bg-emerald-400"
-            : "bg-orange-400";
+              ? "bg-violet-400"
+              : experience.color === "emerald"
+                ? "bg-emerald-400"
+                : "bg-orange-400";
 
         return (
           <div key={experience.id} className="relative mb-20">
@@ -73,35 +73,33 @@ const Timeline = () => {
 
             </div>
 
-            {/* ========================= MOBILE ========================= */}
+            {/* ================= MOBILE ================= */}
 
-          {/* ================= MOBILE ================= */}
+            <div className="flex lg:hidden gap-6">
 
-<div className="flex lg:hidden gap-6">
+              {/* Timeline */}
+              <div className="relative flex w-8 shrink-0 justify-center">
 
-  {/* Timeline */}
-  <div className="relative flex w-8 shrink-0 justify-center">
+                {/* Vertical line */}
+                <div className="absolute top-0 bottom-0 w-[3px] rounded-full bg-cyan-400" />
 
-    {/* Vertical line */}
-    <div className="absolute top-0 bottom-0 w-[3px] rounded-full bg-gradient-to-b from-cyan-400 via-violet-500 to-emerald-400" />
+                {/* Dot */}
+                <div
+                  className={`relative mt-8 flex h-8 w-8 items-center justify-center rounded-full border-2 ${borderColor} bg-[#060B17]`}
+                >
+                  <div className={`h-3 w-3 rounded-full ${bgColor}`} />
+                </div>
 
-    {/* Dot */}
-    <div
-      className={`relative mt-8 flex h-8 w-8 items-center justify-center rounded-full border-2 ${borderColor} bg-[#060B17]`}
-    >
-      <div className={`h-3 w-3 rounded-full ${bgColor}`} />
-    </div>
+                {/* Connector */}
+                <div className="absolute left-7 top-12 h-[2px] w-8 bg-gray-700" />
+              </div>
 
-    {/* Connector */}
-    <div className="absolute left-7 top-12 h-[2px] w-8 bg-gray-700" />
-  </div>
+              {/* Card */}
+              <div className="flex-1 pt-2">
+                <ExperienceCard {...experience} />
+              </div>
 
-  {/* Card */}
-  <div className="flex-1 pt-2">
-    <ExperienceCard {...experience} />
-  </div>
-
-</div>
+            </div>
 
           </div>
         );
