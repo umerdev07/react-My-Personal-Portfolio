@@ -1,6 +1,6 @@
 import React from "react";
 import ExperienceCard from "./ExperienceCards";
-import { experiences } from "../../pages/section4/experienceData";
+import { experiences } from "../../pages/section4/ExperienceData";
 
 const Timeline = () => {
   return (
