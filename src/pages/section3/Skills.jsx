@@ -44,7 +44,7 @@ const Skills = () => {
 
         </h2>
 
-        <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-400">
+        <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-400 p-5">
           A collection of technologies, frameworks, and tools I use to build modern web, mobile, and AI-powered applications.
         </p>
 

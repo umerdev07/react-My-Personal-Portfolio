@@ -1,9 +1,23 @@
-import React from 'react'
+import React from "react";
+import Experience from "./Experience";
 
 const Section4 = () => {
   return (
-    <div id='experience' className='scroll-mt-8 w-full h-screen'>Section4</div>
-  )
-}
+    <section
+      id="experience"
+      className="relative overflow-hidden bg-[#060B17] py-24"
+    >
+      {/* Background Glow */}
+      <div className="absolute left-0 top-20 h-72 w-72 rounded-full bg-cyan-500/10 blur-[120px]" />
 
-export default Section4
+      <div className="absolute right-0 bottom-20 h-72 w-72 rounded-full bg-violet-500/10 blur-[120px]" />
+
+      {/* Content */}
+      <div className="mx-auto max-w-7xl px-6">
+        <Experience />
+      </div>
+    </section>
+  );
+};
+
+export default Section4;
