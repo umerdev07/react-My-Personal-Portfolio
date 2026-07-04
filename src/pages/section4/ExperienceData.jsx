@@ -58,4 +58,5 @@ export const experiences = [
 
     skills: ["HTML", "CSS", "JavaScript", "Responsive Design"],
   },
+
 ];

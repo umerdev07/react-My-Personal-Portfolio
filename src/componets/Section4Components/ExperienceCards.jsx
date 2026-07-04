@@ -1,4 +1,5 @@
 import React from "react";
+import Skills from "../Section4Components/Skills";
 
 const colorThemes = {
   cyan: {
@@ -102,25 +103,7 @@ const ExperienceCard = ({
         {description}
       </p>
 
-      {/* Skills */}
-      <div className="mt-5 flex flex-wrap gap-2">
-        {skills.map((skill, index) => (
-          <span
-            key={index}
-            className={`
-              rounded-full
-              border
-              ${theme.border}
-              ${theme.bg}
-              px-3 py-1
-              text-[11px] sm:text-xs
-              ${theme.text}
-            `}
-          >
-            {skill}
-          </span>
-        ))}
-      </div>
+        <Skills skills={skills} color={color}/>
     </div>
   );
 };
