@@ -1,16 +1,15 @@
 import React from "react";
-import "remixicon/fonts/remixicon.css";
-
 
 const ReuseableDemoAndGitButton = ({
   btnText,
   btnIcon,
-  textHoverColor,
-  roundedBtn,
-  bgColor,
-  height,
-  width,
-  border,
+  textHoverColor = "hover:text-white",
+  roundedBtn = "rounded-xl",
+  height = "h-10",
+  width = "w-fit",
+  bgColor = "bg-[#182032]",
+  border = "border border-white/10",
+  textColor = "text-gray-300",
   onClick,
 }) => {
   return (
@@ -18,26 +17,27 @@ const ReuseableDemoAndGitButton = ({
       onClick={onClick}
       className={`
         ${roundedBtn}
-        ${bgColor}
         ${height}
-        ${textHoverColor}
-        ${border}
         ${width}
+        ${bgColor}
+        ${border}
+        ${textColor}
+        ${textHoverColor}
         px-4
-        border
-        border-cyan-500/20
-        text-white
         text-sm
         font-semibold
-        transition-all
-        duration-300
         flex
         items-center
         justify-center
         gap-2
+        transition-all
+        duration-300
+        hover:-translate-y-0.5
+        hover:border-cyan-400/40
       `}
     >
-      {btnIcon && <i className={btnIcon}></i>}
+      {btnIcon && <i className={`${btnIcon} text-base`}></i>}
+
       <span>{btnText}</span>
     </button>
   );

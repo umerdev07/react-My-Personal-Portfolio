@@ -30,7 +30,7 @@ const FinalYearLeftContentCard = () => {
             </div>
 
             <div className='mt-4'>
-                <h3 className='text-start text-gray-400 font-medium'>A cutting-edge communication platform leveraging NLP and WebRTC for real-time multilingual video conferencing. Features live speech-to-text translation, sentiment analysis, and speaker diarization for seamless cross-language communication at scale.</h3>
+                <h3 className='text-start text-gray-400 font-medium'>AI-powered video conferencing platform with real-time bilingual speech translation (English ↔ Urdu), live captions, secure authentication, and seamless cross-language communication.</h3>
             </div>
 
             {/* Skills */}

@@ -3,7 +3,7 @@ import FinalYearProjects from '../../componets/Section5Components/FinalYearProje
 
 const Projects = () => {
     return (
-        <section className="w-full py-20 ">
+        <section className="w-full py-20 bg-[#07091a]">
             {/* Badge */}
             <div className="flex justify-center">
                 <div className="flex items-center gap-3 rounded-full border border-cyan-500/30 bg-[#09192a]/80 px-6 py-2 backdrop-blur-md shadow-[0_0_20px_rgba(34,211,238,0.12)]">
