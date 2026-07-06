@@ -47,7 +47,7 @@ const FinalYearLeftContentCard = () => {
                         border="border-none"
                         bgColor="bg-gradient-to-r from-cyan-400 to-violet-500"
                         onClick={() =>
-                            window.open("https://github.com", "_blank")
+                            window.open("https://timely-licorice-cc3b58.netlify.app/", "_blank")
                         }
                    />
                     <ReuseableDemoAndGitButton
@@ -59,7 +59,7 @@ const FinalYearLeftContentCard = () => {
                         width="w-fit"
                         bgColor="bg-[#182032]"
                         onClick={() =>
-                            window.open("https://github.com", "_blank")
+                            window.open("https://github.com/umerdev07/SpeakSync-AI-Powered-Video-Conferencing-Platfoam", "_blank")
                         }
                    />
             </div>

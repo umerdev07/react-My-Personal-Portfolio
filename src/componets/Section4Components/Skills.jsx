@@ -31,6 +31,30 @@ const colorThemes = {
     bg: "bg-pink-500/10",
   },
 
+  indigo: {
+    border: "border-indigo-500/20",
+    text: "text-indigo-400",
+    bg: "bg-indigo-500/10",
+  },
+
+  amber: {
+    border: "border-amber-500/20",
+    text: "text-amber-400",
+    bg: "bg-amber-500/10",
+  },
+
+  rose: {
+    border: "border-rose-500/20",
+    text: "text-rose-400",
+    bg: "bg-rose-500/10",
+  },
+
+  sky: {
+    border: "border-sky-500/20",
+    text: "text-sky-400",
+    bg: "bg-sky-500/10",
+  },
+
   green: {
     border: "border-green-500/20",
     text: "text-green-400",

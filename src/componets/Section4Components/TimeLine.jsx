@@ -7,9 +7,7 @@ const Timeline = () => {
     <div className="relative mt-20">
 
       {/* Desktop Vertical Line */}
-      <div className="hidden lg:block absolute left-1/2 top-0 h-full w-[3px] -translate-x-1/2 bg-cyan-400 rounded-full" />
-
-      {experiences.map((experience, index) => {
+<div className="hidden lg:block absolute left-1/2 top-0 h-full w-[3px] -translate-x-1/2 rounded-full bg-gradient-to-b from-cyan-400 via-violet-500 to-pink-500 bg-[length:100%_200%] animate-pulse" />     {experiences.map((experience, index) => {
         const isLeft = index % 2 === 0;
 
         const borderColor =
@@ -33,11 +31,10 @@ const Timeline = () => {
         return (
           <div key={experience.id} className="relative mb-20">
 
-            {/* ========================= DESKTOP ========================= */}
+            {/*  DESKTOP  */}
 
             <div className="hidden lg:grid grid-cols-[1fr_80px_1fr] items-start">
 
-              {/* LEFT */}
               <div className="flex justify-end">
                 {isLeft && <ExperienceCard {...experience} />}
               </div>
@@ -73,7 +70,7 @@ const Timeline = () => {
 
             </div>
 
-            {/* ================= MOBILE ================= */}
+            {/*  MOBILE  */}
 
             <div className="flex lg:hidden gap-6">
 
@@ -81,9 +78,7 @@ const Timeline = () => {
               <div className="relative flex w-8 shrink-0 justify-center">
 
                 {/* Vertical line */}
-                <div className="absolute top-0 bottom-0 w-[3px] rounded-full bg-cyan-400" />
-
-                {/* Dot */}
+<div className="block lg:hidden absolute left-1/2 top-0 h-full w-[3px] -translate-x-1/2 rounded-full bg-gradient-to-b from-cyan-400 via-violet-500 to-pink-500 bg-[length:100%_200%] animate-pulse" />                {/* Dot */}
                 <div
                   className={`relative mt-8 flex h-8 w-8 items-center justify-center rounded-full border-2 ${borderColor} bg-[#060B17]`}
                 >

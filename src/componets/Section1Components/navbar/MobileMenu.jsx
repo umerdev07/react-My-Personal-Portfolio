@@ -1,9 +1,8 @@
 import React from "react";
+import Resumebtn from "./Resumebtn";
 
 const MobileMenu = ({ navItems, setMenuOpen }) => {
-
   const scrollToSection = (id) => {
-
     const section = document.getElementById(id);
 
     if (section) {
@@ -18,7 +17,6 @@ const MobileMenu = ({ navItems, setMenuOpen }) => {
 
   return (
     <div className="flex flex-col px-6 py-4 text-white">
-
       {navItems.map((item) => (
         <button
           key={item.id}
@@ -29,11 +27,7 @@ const MobileMenu = ({ navItems, setMenuOpen }) => {
         </button>
       ))}
 
-      <button className="mt-5 group relative overflow-hidden border border-cyan-400 rounded-full px-5 py-2 text-cyan-300 text-sm hover:bg-white/10 transition-all duration-300">
-        <i className="ri-download-2-line mr-1"></i>
-        Resume
-      </button>
-
+      <Resumebtn mobile />
     </div>
   );
 };

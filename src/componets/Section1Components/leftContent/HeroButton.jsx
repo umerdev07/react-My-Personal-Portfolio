@@ -4,7 +4,11 @@ import resume from "../../../assets/Muhammad_Umer_Yousaf_Software_Engineer.pdf";
 
 
 function HeroButtons() {
-  const handleProjects = () => alert("Projects Button Clicked");
+  const handleProjects = () => {
+    const section = document.getElementById("projects")
+    section?.scrollIntoView({ behavior: "smooth"})
+  };
+
   const handleResume = () => {
     window.open(resume, "_blank");
 
