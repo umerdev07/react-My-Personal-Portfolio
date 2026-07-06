@@ -1,21 +1,21 @@
 import React from "react";
 import ReuseableProjectsCards from "./ReuseableProjectsCards";
 
+// ✅ IMPORT IMAGES (IMPORTANT FIX)
+import alarm from "../../assets/alarm.png";
+import picture from "../../assets/picture.png";
+import shopping from "../../assets/shopping.png";
+import scan from "../../assets/scan.png";
+import checklist from "../../assets/checklist.png";
+import supply from "../../assets/supply.png";
+import sentiment from "../../assets/sentiment-analysis.png";
+import read from "../../assets/read.png";
+
 const OthersProjectsCards = () => {
   return (
     <div className="mx-auto max-w-[93%] sm:px-6 lg:px-8 mt-10">
-      <div
-        className="
-          mt-10
-          grid
-          grid-cols-1
-          sm:grid-cols-2
-          xl:grid-cols-4
-          gap-5
-          mx-5
-          items-stretch
-        "
-      >
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 mx-5 items-stretch">
+
         <ReuseableProjectsCards
           projectIconImg="https://static.vecteezy.com/system/resources/thumbnails/055/041/208/small/sprout-of-plant-3d-icon-illustration-3d-render-png.png"
           projectTitle="EcoScan"
@@ -27,7 +27,7 @@ const OthersProjectsCards = () => {
         />
 
         <ReuseableProjectsCards
-          projectIconImg="src\assets\alarm.png"
+          projectIconImg={alarm}
           projectTitle="SafeBeacon"
           projectDescription="Emergency safety application that enables users to send instant SOS alerts, share live location with trusted contacts, and access essential safety features during critical situations."
           projectSkills={["Java", "Firebase", "Twilio"]}
@@ -37,7 +37,7 @@ const OthersProjectsCards = () => {
         />
 
         <ReuseableProjectsCards
-          projectIconImg="src\assets\picture.png"
+          projectIconImg={picture}
           projectTitle="AuraWall"
           projectDescription="Native Android wallpaper application with a dedicated admin panel for managing wallpaper collections, categories, and uploads, allowing users to browse, download, and save high-quality wallpapers."
           projectSkills={["Kotlin", "Firebase", "Android"]}
@@ -47,7 +47,7 @@ const OthersProjectsCards = () => {
         />
 
         <ReuseableProjectsCards
-          projectIconImg="src\assets\shopping.png"
+          projectIconImg={shopping}
           projectTitle="E-Commerce Shopping App"
           projectDescription="Full-featured e-commerce application with secure authentication, product browsing, shopping cart, and cloud-based image management for a seamless shopping experience."
           projectSkills={["Flutter", "Firebase", "Cloudinary"]}
@@ -55,8 +55,9 @@ const OthersProjectsCards = () => {
           demoLink="#"
           githubLink="https://github.com/umerdev07/E-commerce-Shopping-App"
         />
+
         <ReuseableProjectsCards
-          projectIconImg="src\assets\scan.png"
+          projectIconImg={scan}
           projectTitle="OCR Scanner App"
           projectDescription="A Flutter-based OCR application that extracts text from images, stores scanned results locally, and provides a fast and convenient document digitization experience."
           projectSkills={["Flutter", "OCR", "Image"]}
@@ -64,8 +65,9 @@ const OthersProjectsCards = () => {
           demoLink="#"
           githubLink="https://github.com/umerdev07/PakText"
         />
+
         <ReuseableProjectsCards
-          projectIconImg="src\assets\checklist.png"
+          projectIconImg={checklist}
           projectTitle="My To-Do"
           projectDescription="A productivity application featuring secure authentication, task management with CRUD operations, Google Sign-In, and multilingual support powered by Firebase."
           projectSkills={["Kotlin", "Firebase", "Firestore"]}
@@ -73,8 +75,9 @@ const OthersProjectsCards = () => {
           demoLink="#"
           githubLink="https://github.com/umerdev07/My-Todos"
         />
+
         <ReuseableProjectsCards
-          projectIconImg="src\assets\supply.png"
+          projectIconImg={supply}
           projectTitle="Inventory Manager"
           projectDescription="A desktop inventory management system built with C# and .NET, featuring stock tracking, CRUD operations, and SQL Server database integration."
           projectSkills={["C#", ".Net", "SQL Server"]}
@@ -82,8 +85,9 @@ const OthersProjectsCards = () => {
           demoLink="#"
           githubLink="https://github.com/umerdev07/Inventory-Management-System-Desktop-Application"
         />
+
         <ReuseableProjectsCards
-          projectIconImg="src\assets\sentiment-analysis.png"
+          projectIconImg={sentiment}
           projectTitle="Sentiment Analysis"
           projectDescription="A machine learning project that analyzes Amazon product reviews using NLP techniques to classify customer sentiment after data preprocessing and feature engineering."
           projectSkills={["Python", "NLP", "Machine Learning", "Data Science"]}
@@ -91,15 +95,17 @@ const OthersProjectsCards = () => {
           demoLink="#"
           githubLink="https://github.com/umerdev07/Amazon-Product-Review-Sentimental-Analysis"
         />
+
         <ReuseableProjectsCards
-          projectIconImg="src\assets\read.png"
+          projectIconImg={read}
           projectTitle="Text Summarizer"
           projectDescription="A Python-based NLP application that generates concise summaries from lengthy text while preserving the key information and overall context."
-          projectSkills={["Python#", " NLP", "Text Preprocessing"]}
+          projectSkills={["Python", "NLP", "Text Preprocessing"]}
           theme="sky"
           demoLink="#"
           githubLink="#"
         />
+
       </div>
     </div>
   );
