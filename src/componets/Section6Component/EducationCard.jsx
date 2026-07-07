@@ -1,5 +1,7 @@
 import React from "react";
 import Skills from "../Section4Components/Skills";
+import educationImage from "../../assets/educationHat.png";
+
 
 const EducationCard = () => {
   return (
@@ -11,7 +13,7 @@ const EducationCard = () => {
           <div className="flex-shrink-0">
             <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-[#172033] border border-cyan-400/20 flex items-center justify-center">
               <img
-                src='src\assets\educationHat.png'
+                src={educationImage}
                 alt="Education"
                 className="w-8 h-8 sm:w-10 sm:h-10"
               />
