@@ -1,20 +1,22 @@
 import React from "react";
 
 const ReuseableAboutmeCards = ({
-    icon,
-    title,
-    subtitle,
-    circleBg,
-    hoverBg,
-    hoverBorder,
-    circleBorder,
+  icon,
+  iconType = "element",
+  title,
+  subtitle,
+  description,
+  circleBg,
+  hoverBg,
+  hoverBorder,
+  circleBorder,
 }) => {
-    return (
-        <div
-            className={`
+  return (
+    <div
+      className={`
         group
-        ${hoverBg}
-        ${hoverBorder}
+        ${hoverBg || ""}
+        ${hoverBorder || ""}
         mb-4
         flex
         items-start
@@ -30,13 +32,13 @@ const ReuseableAboutmeCards = ({
         hover:-translate-y-1
         hover:shadow-lg
       `}
-        >
-            {/* Icon */}
+    >
 
-            <div
-                className={`
-          ${circleBg}
-          ${circleBorder}
+      {/* Icon */}
+      <div
+        className={`
+          ${circleBg || ""}
+          ${circleBorder || ""}
           flex
           h-12
           w-12
@@ -48,23 +50,40 @@ const ReuseableAboutmeCards = ({
           rounded-full
           border
         `}
-            >
-                {icon}
-            </div>
+      >
+        {iconType === "image" ? (
+          <img
+            src={icon}
+            alt={title}
+            className="h-6 w-6 sm:h-8 sm:w-8 object-contain"
+          />
+        ) : (
+          icon
+        )}
+      </div>
 
-            {/* Text */}
 
-            <div className="flex-1">
-                <h2 className="text-base sm:text-lg font-bold text-white">
-                    {title}
-                </h2>
+      {/* Content */}
+      <div className="flex-1 text-left">
 
-                <p className="mt-1 text-sm leading-6 text-[#94a3b8]">
-                    {subtitle}
-                </p>
-            </div>
-        </div>
-    );
+        <h2 className="text-base sm:text-lg font-bold text-white">
+          {title}
+        </h2>
+
+        <p className="mt-1 text-sm leading-6 text-[#94a3b8]">
+          {subtitle}
+        </p>
+
+        {description && (
+          <p className="mt-2 text-xs sm:text-sm text-gray-500 leading-5">
+            {description}
+          </p>
+        )}
+
+      </div>
+
+    </div>
+  );
 };
 
 export default ReuseableAboutmeCards;
