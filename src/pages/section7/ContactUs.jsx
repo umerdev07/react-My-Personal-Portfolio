@@ -29,7 +29,7 @@ const ContactUs = () => {
                         Together
                     </span>
 
-                    <p className="mx-auto font-medium mb-10 mt-6 max-w-3xl text-lg text-gray-400 p-5">
+                    <p className="mx-auto font-medium mb-5 mt-6 max-w-3xl text-lg text-gray-400 p-5">
                         Open to full-time roles, internships, and exciting collaborations
                     </p>
 

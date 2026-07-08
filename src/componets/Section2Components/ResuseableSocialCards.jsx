@@ -31,7 +31,7 @@ const ReusableSocialCards = ({
       </div>
 
       {!iconOnly && (
-        <p className="text-lg font-semibold text-gray-300">
+        <p className="text-[16px] font-semibold text-gray-300">
           {socialName}
         </p>
       )}
