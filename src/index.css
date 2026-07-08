@@ -3,16 +3,26 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
 html {
   scroll-behavior: smooth;
-}
-
-/* Hide scrollbar for Firefox */
-html {
   scrollbar-width: none;
+
+  --x: 50%;
+  --y: 50%;
 }
 
-/* Hide scrollbar for IE */
 body {
   -ms-overflow-style: none;
+
+  background-color: #07091a;
+
+  background-image:
+    radial-gradient(
+      350px circle at var(--x) var(--y),
+      rgba(34, 211, 238, 0.15),
+      transparent 70%
+    );
+
+  background-attachment: fixed;
 }

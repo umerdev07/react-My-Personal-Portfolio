@@ -1,35 +1,40 @@
 import React from "react";
 
-const ReusableSocialCards = ({ icon, socialName, onClick }) => {
+const ReusableSocialCards = ({
+  icon,
+  socialName,
+  onClick,
+  width = "w-full",
+  height = "h-20",
+  rounded = "rounded-[28px]",
+  iconOnly = false,
+}) => {
   return (
     <button
       onClick={onClick}
-      className="
-        w-full
-        flex
-        items-center
-        justify-center
-        gap-3
-        p-4
-        rounded-2xl
-        cursor-pointer
-        border
-        border-gray-700
-        bg-[#0B1220]
-        transition-all
-        duration-300
-        hover:border-cyan-500
-        hover:bg-cyan-500/10
-        hover:-translate-y-0.5
-      "
+      className={`
+        ${width}
+        ${height}
+        ${rounded}
+        bg-[#151d33]
+        border border-white/10
+        flex items-center
+        ${iconOnly ? "justify-center" : "justify-start gap-5 px-7"}
+        transition-all duration-300
+        hover:border-cyan-400
+        hover:bg-[#1b2642]
+        hover:-translate-y-1
+      `}
     >
-      <div className="text-cyan-400 text-xl">
+      <div className="text-cyan-400 text-2xl">
         {icon}
       </div>
 
-      <span className="text-sm sm:text-base font-semibold text-[#94a3b8]">
-        {socialName}
-      </span>
+      {!iconOnly && (
+        <p className="text-lg font-semibold text-gray-300">
+          {socialName}
+        </p>
+      )}
     </button>
   );
 };
