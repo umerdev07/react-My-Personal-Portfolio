@@ -58,11 +58,11 @@ const SkillCard = ({ skill, theme, index }) => {
           <h3 className="text-white text-lg font-semibold">
             {skill.name}
           </h3>
-
         </div>
 
       </div>
     </motion.div>
+    
   );
 };
 

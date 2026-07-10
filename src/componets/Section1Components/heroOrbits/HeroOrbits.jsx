@@ -3,8 +3,8 @@ import TechBadge from "./TechBadge";
 import orbitData from "./OrbitData";
 
 const RING_RADII = {
-  inner: 0.225,
-  middle: 0.35,
+  inner: 0.27,
+  middle: 0.38,
   outer: 0.50,
 };
 
@@ -74,17 +74,15 @@ const HeroOrbit = () => {
     >
       {/* Rings */}
       <div className="absolute w-full h-full rounded-full border border-cyan-500/20" />
-      <div className="absolute w-[70%] h-[70%] rounded-full border border-blue-500/20" />
-      <div className="absolute w-[45%] h-[45%] rounded-full border border-blue-400/10" />
+      <div className="absolute w-[80%] h-[80%] rounded-full border border-blue-500/20" />
+      <div className="absolute w-[50%] h-[50%] rounded-full border border-blue-400/10" />
 
       {/* Glow */}
       <div className="absolute w-40 h-40 sm:w-56 sm:h-56 lg:w-72 lg:h-72 rounded-full bg-cyan-500/20 blur-3xl" />
 
       {/* Center */}
-      <div className="relative flex items-center justify-center rounded-[28px] border border-white/10 bg-gradient-to-br from-[#27496d] to-[#2b2f68] shadow-[0_0_70px_rgba(59,130,246,.25)] w-20 h-20 sm:w-36   sm:h-36 md:w-44 md:h-44 lg:w-52 lg:h-52">
-        <h1 className="font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent text-3xl sm:text-5xl lg:text-6xl">
-          UY
-        </h1>
+      <div className="relative flex items-center justify-center rounded-full border border-white/10 bg-gradient-to-br from-[#27496d] to-[#2b2f68] shadow-[0_0_70px_rgba(59,130,246,.25)] w-18 h-18 sm:w-36   sm:h-36 md:w-44 md:h-44 lg:w-52 lg:h-52">
+        <i class="ri-code-s-slash-line text-2xl md:text-4xl lg:text-8xl text-cyan-300"></i>
       </div>
 
       {/* Orbit Items */}
